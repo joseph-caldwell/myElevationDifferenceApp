@@ -3,7 +3,6 @@ import {
   StyleSheet,
   View,
   Text,
-  Image,
   Dimensions,
   Alert,
   TouchableOpacity,
@@ -12,9 +11,7 @@ import MapView, {
   Callout,
   Marker,
   PROVIDER_GOOGLE,
-  Polyline,
-  AnimatedRegion,
-  Animated,
+
 } from 'react-native-maps';
 import Geolocation from 'react-native-geolocation-service';
 
@@ -157,7 +154,7 @@ export default class MapScreen extends React.Component {
         });
         Alert.alert(
           'ELEVATION Difference: ',
-          'The differtence in elevation is ' +
+          'The difference in elevation is ' +
             difference.toFixed(2) +
             ' meters or ' +
             differenceFt.toFixed(2) +
@@ -212,7 +209,6 @@ export default class MapScreen extends React.Component {
           zoomControlEnabled={true}
           minZoomLevel={2}
           maxZoomLevel={17}
-          toolbarEnabled={true}
           showsBuildings={true}
           loadingIndicatorColor={'red'}
           loadingEnabled={true}
